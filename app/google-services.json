@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733922287842",
+    "firebase_url": "https://uas2-fc521.firebaseio.com",
+    "project_id": "uas2-fc521",
+    "storage_bucket": "uas2-fc521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733922287842:android:999e796abe0e55b7d7febb",
+        "android_client_info": {
+          "package_name": "id.ac.umn.uas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733922287842-5k2025fbcm0ivf96tlhas0vegn04u0f5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.ac.umn.uas",
+            "certificate_hash": "5cec534374fa4f70c54ac6e01deb2560a80a28fc"
+          }
+        },
+        {
+          "client_id": "733922287842-jqgcq3pu9otshiqa55elcgj3mvrdmra8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6gOtGhwqwZ6fmcU4cmCWum2agL-phyaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733922287842-jqgcq3pu9otshiqa55elcgj3mvrdmra8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
