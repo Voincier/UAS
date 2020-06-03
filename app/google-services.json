@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "733922287842-er630e05pc4e9ki1a9g36evsbc0mct0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.ac.umn.uas",
+            "certificate_hash": "4baaac50aac2c4df1ba6818344e409fd8b20a55e"
+          }
+        },
+        {
           "client_id": "733922287842-5k2025fbcm0ivf96tlhas0vegn04u0f5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
