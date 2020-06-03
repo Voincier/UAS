@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             loading.dismiss();
-                            Intent i = new Intent(MainActivity.this,ListActivity.class);
+                            Intent i = new Intent(MainActivity.this,OptionActivity.class);
                             startActivity(i);
                             finish();
 
