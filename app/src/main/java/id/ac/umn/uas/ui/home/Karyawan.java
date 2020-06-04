@@ -1,26 +1,27 @@
 package id.ac.umn.uas.ui.home;
 
 public class Karyawan {
-    public String mEmail,mNama,mPassword,mJabatan,mMatkul,mBio,mGaji,mKodeKelas,mInfo,mFoto,mId;
+    public String mEmail,mName,mPassword,mJob,mMatkul,mBio,mGaji,mKelas,mInfo,mFoto,mId;
 
     public Karyawan(){}
 
-    public Karyawan(String mJabatan,String mNama,String mFoto,String mId){
+    public Karyawan(String mJob,String mName,String mFoto,String mId){
         this.mId = mId;
-        this.mJabatan = mJabatan;
-        this.mNama = mNama;
+        this.mJob = mJob;
+        this.mName = mName;
         this.mFoto = mFoto;
     }
 
-    public Karyawan(String mJabatan,String mNama,String mFoto,String mId,String mMatkul,String mBio, String mKodeKelas, String mInfo){
+    public Karyawan(String mJob,String mName,String mFoto,String mId,String mMatkul,String mBio, String mKelas, String mInfo,String mGaji){
         this.mId = mId;
-        this.mJabatan = mJabatan;
-        this.mNama = mNama;
+        this.mJob = mJob;
+        this.mName = mName;
         this.mFoto = mFoto;
         this.mMatkul = mMatkul;
         this.mBio = mBio;
-        this.mKodeKelas = mKodeKelas;
+        this.mKelas = mKelas;
         this.mInfo = mInfo;
+        this.mGaji = mGaji;
     }
 
     public String getId(){
@@ -31,20 +32,20 @@ public class Karyawan {
         this.mId = mId;
     }
 
-    public String getNama(){
-        return this.mNama;
+    public String getName(){
+        return this.mName;
     }
 
-    public void setNama(String mNama){
-        this.mNama = mNama;
+    public void setName(String mName){
+        this.mName = mName;
     }
 
-    public String getJabatan(){
-        return this.mJabatan;
+    public String getJob(){
+        return this.mJob;
     }
 
-    public void setjabatan(String mJabatan){
-        this.mJabatan = mJabatan;
+    public void setJob(String mJob){
+        this.mJob = mJob;
     }
 
     public String getFoto(){
@@ -67,11 +68,15 @@ public class Karyawan {
 
     public void setEmail(String mEmail) { this.mEmail = mEmail; }
 
-    public String getKodeKelas() { return this.mKodeKelas; }
+    public String getKelas() { return this.mKelas; }
 
-    public void setKodeKelas(String mKodeKelas) { this.mKodeKelas = mKodeKelas; }
+    public void setKelas(String mKelas) { this.mKelas = mKelas; }
 
     public String getInfo() { return this.mInfo; }
 
     public void setInfo(String mInfo) { this.mInfo = mInfo; }
+
+    public String getGaji() { return this.mGaji; }
+
+    public void setGaji(String mGaji) { this.mGaji = mGaji; }
 }

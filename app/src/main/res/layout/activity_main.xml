@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="315dp" />
 
     <TextView
-        android:id="@+id/regis"
+        android:id="@+id/toRegis"
         android:layout_width="104dp"
         android:layout_height="35dp"
         android:ems="10"

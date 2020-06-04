@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog loading;
     EditText eEmail, ePassword;
     Button login;
+    TextView toRegis;
 
 
     @Override
@@ -36,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
 
         eEmail = findViewById(R.id.email_log);
         ePassword = findViewById(R.id.pw_log);
+        toRegis = findViewById(R.id.toRegis);
+
+        toRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(i);
+            }
+        });
 
         login = findViewById(R.id.login);
 

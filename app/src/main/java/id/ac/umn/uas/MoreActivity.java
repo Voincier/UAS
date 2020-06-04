@@ -28,7 +28,7 @@ import id.ac.umn.uas.ui.home.Karyawan;
 
 public class MoreActivity extends AppCompatActivity {
     Button finishBtn;
-    EditText eSubject, eClass, eSalary, eBio;
+    EditText eSubject, eClass, eSalary, eBio,eNum;
     Spinner jobSpinner;
     ProgressDialog loading;
     FirebaseAuth auth;
@@ -46,6 +46,7 @@ public class MoreActivity extends AppCompatActivity {
         eClass = findViewById(R.id.class_reg);
         eBio = findViewById(R.id.bio_reg);
         eSalary = findViewById(R.id.salary_reg);
+        eNum = findViewById(R.id.no_reg);
 
         jobSpinner = findViewById(R.id.spinner_reg);
 
@@ -56,13 +57,14 @@ public class MoreActivity extends AppCompatActivity {
         finishBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                String sub, cla, bio,sal;
+                String sub, cla, bio,sal,num;
                 String job=String.valueOf(jobSpinner.getSelectedItem());
 
                 sal = eSalary.getText().toString();
                 sub = eSubject.getText().toString();
                 bio = eBio.getText().toString();
                 cla = eClass.getText().toString();
+                num = eNum.getText().toString();
 
                 if(TextUtils.isEmpty(sub) || TextUtils.isEmpty(bio) || TextUtils.isEmpty(cla)) {
                     Toast.makeText(MoreActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
@@ -70,7 +72,7 @@ public class MoreActivity extends AppCompatActivity {
                 else{
                     loading.setMessage("Create your profile");
                     loading.show();
-                    register(sal,sub,bio,cla,job);
+                    register(sal,sub,bio,cla,job,num);
                 }
             }
 
@@ -78,8 +80,8 @@ public class MoreActivity extends AppCompatActivity {
         });
     }
 
-    private void register(String salary,String subject, String bio, String clas, String job){
-
+    private void register(String salary,String subject, String bio, String clas, String job,String num){
+        final HashMap<String, Object> hashMap=new HashMap<>();
         FirebaseUser fbUser=auth.getCurrentUser();
         String userID=fbUser.getUid();
         ref= FirebaseDatabase.getInstance().getReference("user").child(userID);
@@ -87,9 +89,12 @@ public class MoreActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Karyawan kwn = dataSnapshot.getValue(Karyawan.class);
-                nama = kwn.getNama();
-                email = kwn.getEmail();
-                foto = kwn.getFoto();
+                hashMap.put("name", kwn.getName());
+                hashMap.put("email",kwn.getEmail());
+                hashMap.put("foto",kwn.getFoto());
+//                nama = kwn.getName();
+//                email = kwn.getEmail();
+//                foto = kwn.getFoto();
             }
 
             @Override
@@ -98,23 +103,22 @@ public class MoreActivity extends AppCompatActivity {
             }
         });
 
-        HashMap<String, String> hashMap=new HashMap<>();
-//        hashMap.put("id",userID);
-//        hashMap.put("name", nama);
-//        hashMap.put("email",email);
-//        hashMap.put("foto",foto);
+
+        hashMap.put("id",userID);
+
         hashMap.put("gaji",salary);
         hashMap.put("matkul",subject);
         hashMap.put("bio",bio);
         hashMap.put("kelas",clas);
         hashMap.put("job",job);
+        hashMap.put("info",num);
 
-        ref.setValue(hashMap, new DatabaseReference.CompletionListener() {
+        ref.updateChildren(hashMap, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 loading.dismiss();
                 Toast.makeText(MoreActivity.this, "Added Additional Details", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MoreActivity.this,OptionActivity.class));
+                startActivity(new Intent(MoreActivity.this,MainActivity.class));
             }
         });
     }

@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
+import id.ac.umn.uas.DetailActivity;
 import id.ac.umn.uas.R;
 
 public class HomeFragment extends Fragment {
@@ -45,7 +46,7 @@ public class HomeFragment extends Fragment {
         super.onStop();
         adapter.stopListening();
     }
-    
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -97,16 +98,16 @@ public class HomeFragment extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder holder, final int position, @NonNull final Karyawan model) {
-                holder.setNama(model.getNama());
-                holder.setJabatan(model.getJabatan());
+                holder.setNama(model.getName());
+                holder.setJabatan(model.getJob());
                 holder.setImg(model.getFoto());
                 holder.root.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(getContext(), String.valueOf(model.getId()), Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(getActivity(), DetailActivity.class);
-//                        i.putExtra("nimy",String.valueOf(model.getId()));
-//                        startActivity(i);
+                        // Toast.makeText(getContext(), String.valueOf(model.getId()), Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getActivity(), DetailActivity.class);
+                        i.putExtra("id",String.valueOf(model.getId()));
+                        startActivity(i);
                     }
                 });
             }
