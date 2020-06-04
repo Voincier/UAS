@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "All fields are required",Toast.LENGTH_SHORT).show();
                 }
                 else if(!pw.equals(confirm)){
-                    Toast.makeText(RegisterActivity.this,"Password does not", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this,"Password does not match", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     loading.setMessage("Create your profile");
@@ -90,7 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                                     loading.dismiss();
                                     Toast.makeText(RegisterActivity.this, "Register Successful", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                                    startActivity(new Intent(RegisterActivity.this,MoreActivity.class));
                                 }
                             });
 

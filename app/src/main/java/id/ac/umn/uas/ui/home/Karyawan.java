@@ -12,6 +12,17 @@ public class Karyawan {
         this.mFoto = mFoto;
     }
 
+    public Karyawan(String mJabatan,String mNama,String mFoto,String mId,String mMatkul,String mBio, String mKodeKelas, String mInfo){
+        this.mId = mId;
+        this.mJabatan = mJabatan;
+        this.mNama = mNama;
+        this.mFoto = mFoto;
+        this.mMatkul = mMatkul;
+        this.mBio = mBio;
+        this.mKodeKelas = mKodeKelas;
+        this.mInfo = mInfo;
+    }
+
     public String getId(){
         return this.mId;
     }
@@ -43,4 +54,24 @@ public class Karyawan {
     public void setFoto(String mFoto){
         this.mFoto = mFoto;
     }
+
+    public String getMatkul() { return this.mMatkul; }
+
+    public void setMatkul(String mMatkul) { this.mMatkul = mMatkul; }
+
+    public String getBio() { return this.mBio; }
+
+    public void getBio(String mBio) { this.mBio = mBio; }
+
+    public String getEmail() { return this.mEmail; }
+
+    public void setEmail(String mEmail) { this.mEmail = mEmail; }
+
+    public String getKodeKelas() { return this.mKodeKelas; }
+
+    public void setKodeKelas(String mKodeKelas) { this.mKodeKelas = mKodeKelas; }
+
+    public String getInfo() { return this.mInfo; }
+
+    public void setInfo(String mInfo) { this.mInfo = mInfo; }
 }
