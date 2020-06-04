@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
         super.onStop();
         adapter.stopListening();
     }
-    
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -97,8 +97,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder holder, final int position, @NonNull final Karyawan model) {
-                holder.setNama(model.getNama());
-                holder.setJabatan(model.getJabatan());
+                holder.setNama(model.getName());
+                holder.setJabatan(model.getJob());
                 holder.setImg(model.getFoto());
                 holder.root.setOnClickListener(new View.OnClickListener() {
                     @Override

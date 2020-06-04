@@ -87,7 +87,7 @@ public class MoreActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Karyawan kwn = dataSnapshot.getValue(Karyawan.class);
-                nama = kwn.getNama();
+                nama = kwn.getName();
                 email = kwn.getEmail();
                 foto = kwn.getFoto();
             }
