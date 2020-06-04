@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutMeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About App"
+        android:textSize="30sp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a) Aplikasi ini dibuat sebagai proyek UAS dari kelas Mobile
+        Application Programming. Aplikasi akan dimulai dengan
+        login sebagai Activity pertama yang terbuka, apabila pengguna
+        belum pernah melakukan register, pengguna harus melakukan
+        register terlebih dahulu dan akan memasukkan data yang
+        diminta. Lalu akan berpindah Activity yang akan menampilkan
+        semua data yang telah diinput. Aplikadi dapat diubah menjadi
+        dark mode dengan switch yang telah disediakan. Aplikasi ini
+        dihubungkan dengan Firebase."/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="b) Aplikasi ini dibuat dengan saya membuat Firebase dan
+        menyambungkan aplikasi ini dengan Firebase. Kemudian
+        membuat activity yang diperlukan untuk aplikasi dapat berjalan
+        beserta fungsi dari activity tersebut."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c) Tugas ini dikearjakan bersama Joy Amadea."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d) Tidak mengimport library lain."/>
+
+
+</LinearLayout>
