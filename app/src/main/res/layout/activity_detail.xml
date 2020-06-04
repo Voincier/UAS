@@ -4,57 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-       <ImageView
-           android:id="@+id/imgViewing"
-           android:layout_width="150dp"
-           android:layout_height="150dp"/>
+        <ImageView
+            android:id="@+id/imgViewing"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
 
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
-           <TextView
-               android:id="@+id/name"
-               android:layout_width="235dp"
-               android:layout_height="wrap_content"
-               android:layout_marginHorizontal="15dp"
-               android:textSize="30dp"
-               android:layout_marginTop="10dp"
-               />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                />
 
-           <EditText
-               android:id="@+id/name_edit"
-               android:layout_width="235dp"
-               android:layout_height="wrap_content"
-               android:layout_marginHorizontal="15dp"
-               android:textSize="30dp"
-               android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"/>
 
-           <TextView
-               android:id="@+id/job"
-               android:layout_width="235dp"
-               android:layout_height="wrap_content"
-               android:layout_marginHorizontal="15dp"
-               android:layout_marginTop="10dp"
-               />
-           <TextView
-               android:id="@+id/bidang"
-               android:layout_width="235dp"
-               android:layout_height="wrap_content"
-               android:layout_marginHorizontal="15dp"
-               android:layout_marginTop="10dp"
-               />
+            <TextView
+                android:id="@+id/job"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/bidang"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                />
 
-       </LinearLayout>
+        </LinearLayout>
 
-   </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/bio"
@@ -144,7 +144,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit This Profile"/>
-
-
 
 </LinearLayout>

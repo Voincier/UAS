@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
+import id.ac.umn.uas.DetailActivity;
 import id.ac.umn.uas.R;
 
 public class HomeFragment extends Fragment {
@@ -103,10 +104,10 @@ public class HomeFragment extends Fragment {
                 holder.root.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(getContext(), String.valueOf(model.getId()), Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(getActivity(), DetailActivity.class);
-//                        i.putExtra("nimy",String.valueOf(model.getId()));
-//                        startActivity(i);
+                        // Toast.makeText(getContext(), String.valueOf(model.getId()), Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getActivity(), DetailActivity.class);
+                        i.putExtra("id",String.valueOf(model.getId()));
+                        startActivity(i);
                     }
                 });
             }

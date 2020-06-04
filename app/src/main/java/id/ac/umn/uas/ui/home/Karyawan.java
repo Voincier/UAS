@@ -12,7 +12,7 @@ public class Karyawan {
         this.mFoto = mFoto;
     }
 
-    public Karyawan(String mJob,String mName,String mFoto,String mId,String mMatkul,String mBio, String mKelas, String mInfo){
+    public Karyawan(String mJob,String mName,String mFoto,String mId,String mMatkul,String mBio, String mKelas, String mInfo,String mGaji){
         this.mId = mId;
         this.mJob = mJob;
         this.mName = mName;
@@ -21,6 +21,7 @@ public class Karyawan {
         this.mBio = mBio;
         this.mKelas = mKelas;
         this.mInfo = mInfo;
+        this.mGaji = mGaji;
     }
 
     public String getId(){
@@ -74,4 +75,8 @@ public class Karyawan {
     public String getInfo() { return this.mInfo; }
 
     public void setInfo(String mInfo) { this.mInfo = mInfo; }
+
+    public String getGaji() { return this.mGaji; }
+
+    public void setGaji(String mGaji) { this.mGaji = mGaji; }
 }

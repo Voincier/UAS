@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressDialog loading;
     DatabaseReference ref;
     FirebaseAuth auth;
+    TextView toLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,16 @@ public class RegisterActivity extends AppCompatActivity {
 
         btnRegis = findViewById(R.id.regisBtn);
         loading = new ProgressDialog(this);
+
+        toLogin = findViewById(R.id.toLogin);
+
+        toLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
