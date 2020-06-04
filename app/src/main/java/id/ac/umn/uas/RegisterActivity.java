@@ -84,6 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("name",name);
                             hashMap.put("email",email);
                             hashMap.put("password",password);
+                            hashMap.put("foto","default");
 
                             ref.setValue(hashMap, new DatabaseReference.CompletionListener() {
                                 @Override
